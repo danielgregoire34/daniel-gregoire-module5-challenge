@@ -11,12 +11,15 @@ var ninetext = document.getElementById("9am-text");
 
 $(document).ready(function(){
 
+    //Saving Via local storage
     $(".saveBtn").on("click", function () {
         var textArea = $(this).siblings(".textarea").val();
         var id = $(this).parent().attr("id");
         localStorage.setItem(id, textArea);
     })
 
+
+    //9-5 time blocks for each time
     $("#9am .textarea").val(localStorage.getItem("9am"));
     $("#10am .textarea").val(localStorage.getItem("10am"));
     $("#11am .textarea").val(localStorage.getItem("11am"));
